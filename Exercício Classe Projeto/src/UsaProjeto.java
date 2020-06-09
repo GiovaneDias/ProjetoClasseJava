@@ -8,7 +8,7 @@ public class UsaProjeto {
         double novoCustoHora;
         int horasTrab;
 
-        Projeto projeto1 = new Projeto("Teste");
+        Projeto cliente1 = new Projeto("Teste (Atualize o nome)");
 
         while (escolha != 9) {
             System.out.println("1 - Atualizar nome");
@@ -22,32 +22,32 @@ public class UsaProjeto {
 
             switch (escolha) {
                 case 1:
-                    System.out.print("Novo nome do projeto: ");
+                    System.out.print("Novo nome: ");
                     novoNome = leia.nextLine();
-                    projeto1.setNome(novoNome);
+                    cliente1.setNome(novoNome);
                     break;
 
                 case 2:
-                    System.out.print("Novo valor Custo Hora: ");
+                    System.out.print("Novo valor Custo Hora: R$");
                     novoCustoHora = leia.nextDouble();
                     if (novoCustoHora <= 0) {
                         System.out.println("ERRO! Valor inserido inválido.");
                     } else {
-                        projeto1.setCustoHora(novoCustoHora);
+                        cliente1.setCustoHora(novoCustoHora);
                     }
                     break;
 
                 case 3:
                     System.out.print("Quantidade de horas trabalhadas: ");
                     horasTrab = leia.nextInt();
-                    projeto1.registrarHoras(horasTrab);
+                    cliente1.registrarHoras(horasTrab);
                     break;
 
                 case 4:
-                    System.out.println("Nome: " + projeto1.getNome());
-                    System.out.println("Custo Hora: " + projeto1.getCustoHora());
-                    System.out.println("Horas Trabalhadas: " + projeto1.getHoras());
-                    System.out.println("Custo atual: " + projeto1.getCustoAtual());
+                    System.out.println("Nome: " + cliente1.getNome());
+                    System.out.println("Custo Hora: R$" + cliente1.getCustoHora());
+                    System.out.println("Horas Trabalhadas: " + cliente1.getHoras());
+                    System.out.println("Valor a receber: R$" + cliente1.getCustoAtual());
                     break;
             }
         }
