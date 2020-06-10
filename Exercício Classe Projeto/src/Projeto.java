@@ -33,13 +33,17 @@ public class Projeto {
     }
 
     public void setNome(String nome) {
-        if(nome.trim().equals(nome) != nome.trim().equals("")){
-            this.nome = nome;
+        if(nome.trim().equals("")){
+            System.out.println("ERRO, parâmetro incorreto");
+        }else{
+            this.nome = nome.trim();
         }
     }
 
     public void setCustoHora(double custoHora) {
-        if (custoHora>0) {
+        if (custoHora<=0) {
+            System.out.println("ERRO! Valor inserido inválido.");
+        }else{
             this.custoHora = custoHora;
         }
     }

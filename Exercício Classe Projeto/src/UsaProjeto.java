@@ -8,7 +8,7 @@ public class UsaProjeto {
         double novoCustoHora;
         int horasTrab;
 
-        Projeto cliente1 = new Projeto("Teste (Atualize o nome)");
+        Projeto cliente1 = new Projeto("Atualize o nome");
 
         while (escolha != 9) {
             System.out.println("1 - Atualizar nome");
@@ -30,11 +30,7 @@ public class UsaProjeto {
                 case 2:
                     System.out.print("Novo valor Custo Hora: R$");
                     novoCustoHora = leia.nextDouble();
-                    if (novoCustoHora <= 0) {
-                        System.out.println("ERRO! Valor inserido inválido.");
-                    } else {
-                        cliente1.setCustoHora(novoCustoHora);
-                    }
+                    cliente1.setCustoHora(novoCustoHora);
                     break;
 
                 case 3:
