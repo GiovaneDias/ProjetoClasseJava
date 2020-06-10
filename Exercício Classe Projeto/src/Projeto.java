@@ -33,7 +33,9 @@ public class Projeto {
     }
 
     public void setNome(String nome) {
-            this.nome = nome; 
+        if(nome.trim().equals(nome) != nome.trim().equals("")){
+            this.nome = nome;
+        }
     }
 
     public void setCustoHora(double custoHora) {
@@ -41,5 +43,4 @@ public class Projeto {
             this.custoHora = custoHora;
         }
     }
-
 }
