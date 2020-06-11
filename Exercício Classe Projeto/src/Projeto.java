@@ -7,13 +7,18 @@ public class Projeto {
         this.nome = nome;
         this.custoHora = 10.50;
     }
+
     public Projeto(String nome, double custoHora) {
         this.nome = nome;
         this.custoHora = custoHora;
     }
 
     public void registrarHoras(int horas) {
-        this.horas = horas;
+        if (horas <= 0) {
+            System.out.println("ERRO! Valor inserido inválido.");
+        } else {
+            this.horas = horas;
+        }
     }
 
     public double getCustoAtual() {
@@ -33,17 +38,17 @@ public class Projeto {
     }
 
     public void setNome(String nome) {
-        if(nome.trim().equals("")){
-            System.out.println("ERRO, parâmetro incorreto");
-        }else{
+        if (nome.trim().equals("")) {
+            System.out.println("ERRO! Insira um nome válido.");
+        } else {
             this.nome = nome.trim();
         }
     }
 
     public void setCustoHora(double custoHora) {
-        if (custoHora<=0) {
+        if (custoHora <= 0) {
             System.out.println("ERRO! Valor inserido inválido.");
-        }else{
+        } else {
             this.custoHora = custoHora;
         }
     }
