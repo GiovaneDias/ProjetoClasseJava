@@ -17,7 +17,7 @@ public class Projeto {
         if (horas <= 0) {
             System.out.println("ERRO! Valor inserido inválido.");
         } else {
-            this.horas = horas;
+            this.horas += horas;
         }
     }
 
